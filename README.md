@@ -8,6 +8,7 @@ This repository provides a machine learning framework to predict cancer recurren
 + randomForest (v >= 4.6-14)
 + ROCR (v >= 1.0-11)
 + dplyr (v >= 1.0.7)
++ binaryLogic (v >= 0.3.9)
 
 
 
