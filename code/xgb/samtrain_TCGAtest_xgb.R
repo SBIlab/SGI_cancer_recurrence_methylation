@@ -1,11 +1,6 @@
 library(xgboost)
-library(e1071)
-library(caret)
-library(prediction)
-library(performance)
 library(ROCR)
 library(dplyr)
-library(stringr)
 library(binaryLogic)
 source("../function/get_column_combi.R")
 
@@ -68,6 +63,7 @@ xgb = function(i, x_R, y_R, x_NR, y_NR, sam_x_R, sam_y_R, sam_x_NR, sam_y_NR){
   
   xgb_model = xgboost(data=dtrain, nround=50, params = params, print_every_n=1000)
   
+  pred_prob = predict(xgb_model, dtest)
   pred_test = ROCR::prediction(pred_prob, as.factor(label_ts))
   roc_value = ROCR::performance(pred_test, measure = "tpr", x.measure = "fpr")
   roc_df = data.frame(roc_value@alpha.values[[1]], roc_value@y.values[[1]], roc_value@x.values[[1]])

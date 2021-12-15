@@ -1,16 +1,8 @@
-library(stringr)
 library(binaryLogic)
 library(rJava)
 library(extraTrees)
-library(e1071)
-library(caret)
-library(prediction)
-library(performance)
 library(ROCR)
 library(dplyr)
-library(parallel)
-library(foreach)
-library(doParallel)
 source("../function/get_column_combi.R")
 
 

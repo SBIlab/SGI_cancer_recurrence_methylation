@@ -1,12 +1,6 @@
 library(randomForest)
-library(e1071)
-library(caret)
-library(prediction)
-library(performance)
 library(ROCR)
 library(dplyr)
-library(stringr)
-library(ranger)
 library(binaryLogic)
 source("../function/get_column_combi.R")
 
